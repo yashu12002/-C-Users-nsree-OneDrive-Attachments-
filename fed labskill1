@@ -1,0 +1,60 @@
+import React from 'react';
+
+/**
+ * A simple profile card component.
+ *
+ * @param {object} props
+ * @param {string} props.name - The user's name.
+ * @param {number} props.age - The user's age.
+ * @param {string} props.bio - A short biography for the user.
+ */
+const UserCard = ({ name, age, bio }) => {
+    // Define inline styles for the card and its elements
+    const cardStyle = {
+        border: '1px solid #ddd',
+        borderRadius: '8px',
+        padding: '20px',
+        margin: '20px',
+        maxWidth: '300px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        backgroundColor: '#f9f9f9',
+        fontFamily: 'Arial, sans-serif',
+    };
+
+    const nameStyle = {
+        color: '#333',
+        marginBottom: '5px',
+        fontSize: '1.5em',
+    };
+
+    const ageStyle = {
+        color: '#666',
+        fontSize: '1em',
+        marginBottom: '10px',
+    };
+
+    const bioStyle = {
+        color: '#444',
+        fontSize: '0.9em',
+        borderTop: '1px dashed #ccc',
+        paddingTop: '10px',
+        marginTop: '10px',
+    };
+
+    return (
+        <div style= { cardStyle } >
+        {/* Display the name prop */ }
+        < h2 style = { nameStyle } > { name } </h2>
+
+    {/* Display the age prop */ }
+    <p style={ ageStyle }> Age: { age } </p>
+
+    {/* Display the bio prop */ }
+    <p style={ bioStyle }>
+        ** Bio:** { bio }
+        </p>
+        </div>
+  );
+};
+
+export default UserCard;
